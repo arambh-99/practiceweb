@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+    //    var a='JavaScript'
+        /*
+       1 function definition
+       2 function invoke
+       */
+
+    //    function display()
+    //    {
+    //        alert (a)
+    //    }
+
+function calc()
+
+    {    var bill= Number(prompt('enter your bill'))
+         var age= Number(prompt('enter your age'))
+         var disc=0
+         if(!bill)
+         {
+             alert('enter valid bill')
+         }
+
+         else{
+    if(bill>3500 && age>=18)
+    {
+        
+        disc=12
+    }
+
+   else if(bill>3500 && age<18 )
+    {
+        disc=10
+    }
+   
+    var total= bill - ((bill*disc)/100)
+
+alert(total)
+}}
+ </script>
+</head>
+<body >
+
+    <button onclick="calc()"> calculate</button>
+</body>
+</html>
