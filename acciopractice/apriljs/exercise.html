@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+    //    var a='JavaScript'
+        /*
+       1 function definition
+       2 function invoke
+       */
+
+    //    function display()
+    //    {
+    //        alert (a)
+    //    }
+
+function calc()
+
+    {    var bill= Number(prompt('enter your bill'))
+         var disc=0
+         if(!bill)
+         {
+             alert('enter valid bill')
+         }
+
+         else{
+    if(bill>3500)
+    {
+        disc=10
+    }
+
+   else if(bill>2500)
+    {
+        disc=5
+    }
+   
+    var total= bill - ((bill*disc)/100)
+
+alert(total)
+}}
+ </script>
+</head>
+<body >
+
+    <button onclick="calc()"> calculate</button>
+
+<!-- <button onclick="display()"> Dispay</button> -->
+
+
+
+
+</body>
+</html>
+
+<!-- 
+Event : Any action that you perform on the browser
+
+Event Handler:
+
+1 onclick(CLICK)
+-->
