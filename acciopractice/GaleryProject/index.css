@@ -1,5 +1,6 @@
 body
 {
+    background-image: url("2.jpg");
   display: flex;
   height: 100vh;
   overflow: hidden;  
