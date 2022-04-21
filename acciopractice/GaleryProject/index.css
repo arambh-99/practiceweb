@@ -45,6 +45,7 @@ transition: all 700ms ease-in;
     left: 20px;
     margin: 0;
     opacity: 0;
+    font-family: 'Courier New';
 }
 
 .panel.active h3
