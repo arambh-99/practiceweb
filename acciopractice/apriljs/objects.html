@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script>
+
+let students = [
+      {
+        name: 'Vaishnavi',
+        batch: 8,
+        marks: {
+          science: 80,
+          social: 70,
+          hindi: 80,
+          maths: 100,
+          english: 90,
+        }
+      }, {
+        name: 'Abhishek',
+        batch: 10,
+        marks: {
+          science: 75,
+          social: 75,
+          hindi: 62,
+          maths: 81,
+          english: 52,
+        }
+      }, {
+        name: 'Pappu',
+        batch: 10,
+        marks: {
+          science: 70,
+          social: 72,
+          hindi: 75,
+          maths: 95,
+          english: 82,
+        }
+      }, {
+        name: 'Ram',
+        batch: 7,
+        marks: {
+          science: 35,
+          social: 24,
+          hindi: 22,
+          maths: 95,
+          english: 67,
+        }
+      }, {
+        name: 'Shyam',
+        batch: 9,
+        marks: {
+          science: 45,
+          social: 87,
+          hindi: 65,
+          maths: 78,
+          english: 99,
+        }
+      }
+    ]
+
+let studentsWithCalculatedMarks=[];
+
+for(let i=0;i<students.length;i++)
+{
+    //assign each student to local variable
+
+    let student = students[i]
+
+    //create an empty object which will be pushed to the resultant array later
+
+    let obj={};
+
+    //attach to properties to return
+
+    obj.name = student.name;
+    obj.batch =student.batch;
+
+    //logic to calculate average
+
+    let sum=0
+    let marks=Object.values(student.marks)
+
+    for (let j=0;j<marks.length;j++)
+    {
+        sum +=marks[j]
+    }
+//attach 'average marks key with average value'
+   
+obj.averageMarks= sum/5;
+
+//push the local obj with relavant keys inside resultant array
+studentsWithCalculatedMarks.push(obj);
+
+}
+
+console.log(studentsWithCalculatedMarks);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
