@@ -1,19 +1,67 @@
 <!doctype html>
 <html>
-<head>     
+<head> 
+    
+    <style>
+        h3
+        {text-align: center;}
+
+        body{
+            align-items: center;
+            font-family: 'Courier New';
+        }
+        #Image
+        {
+            
+            display: block;
+           margin-left: auto;
+        margin-right: auto;
+        height: 360px;
+        width: 200px;
+
+ 
+
+        }
+        #btn{
+            
+            display: block;
+            margin-top: 10px;
+           margin-left: auto;
+        margin-right: auto;
+        background-color: #2CB67D;
+    border-radius:7px ;
+    padding: 3px;
+    color: #16161A;
+    font-size : 14px;
+    cursor: pointer;
+    
+
+
+ }
+
+ #btn:active {
+    background-color: #3e8e41;
+    transform: translateY(4px);
+  }
+    </style>
     <script>
+
+
         var bulbstatatus=off
 
         function turnOnOff()
         { if(bulbstatatus)
             {
         document.getElementById('Image').src="https://www.w3schools.com/js/pic_bulboff.gif "
+        document.body.style.background = 'white';
         bulbstatatus=false    
     }
         else
         {
             document.getElementById('Image').src="https://www.w3schools.com/js/pic_bulbon.gif "
+            document.body.style.background = '#FEF6E4';
             bulbstatatus=true
+
         
         }
         }
@@ -22,12 +70,12 @@
         </script>
                 
 </head>
-<body >
+<body id="box">
 
 <h3>button demo switch</h3>
 <img id="Image"  src="https://www.w3schools.com/js/pic_bulboff.gif" >
 <br>
-<button onclick=turnOnOff()> ON/OFF</button>
+<button onclick=turnOnOff() id="btn"> ON/OFF</button>
 
 <!-- 
 <button  onclick=turnOff()> OFF</button> just a change-->
