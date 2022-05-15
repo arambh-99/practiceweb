@@ -21,14 +21,15 @@ body {
  .items {
     height: auto;
     background-color:#7F5AF0;
-    padding: 3%;
+    padding: 5%;
     border-radius: 2%;
     margin: 3%;
     text-align: center;
-    width: 300px;
+    width: 500px;
 
      display: flex;
     justify-content: center;
+    box-shadow: 0 9px #999;
     
 } 
 
