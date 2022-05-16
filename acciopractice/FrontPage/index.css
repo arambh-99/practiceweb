@@ -39,18 +39,32 @@ body {
     background-color: #2CB67D;
     border-radius:7px ;
     padding: 3px;
-    color: #16161A;
-    font-size : 14px;
+    color: white;
+      font-size : 14px;
     cursor: pointer;
     
 
 }
+
 .btn:active {
     background-color: #3e8e41;
     transform: translateY(4px);
   }
+  .btn:hover
+  {
+    background-color: #3e8e41;
+    color: #16161A;
+ 
+  }
 
+.head
+{
+    
+    margin-bottom: 30px;
+   padding-bottom: 10px;
+}
 .subhead
 {
     margin-bottom: 15px ;
+    padding-bottom: 10px;
 }
