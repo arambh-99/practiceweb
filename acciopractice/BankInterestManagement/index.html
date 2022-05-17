@@ -1,22 +1,52 @@
-<!doctype html>
-<html>
-<head>     
-		
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Interest Management</title>
+
+<link rel="stylesheet" href="index.css">
 </head>
-<body ><H3>something</H3>
-<script>
+<body>
+<div class="bank-balance-display">
+    <table >
+<tr>
+    <th>Account Holder Name</th>
+    <th>Previous Account Banlance</th>
+    <th>Balance After Interest</th>
 
-// var x=5
+</tr>
+<tr>
+    <td>Aditiya</td>
+    <td><input type="number" id="bank-balance-1" ></td>
+    <td><input type="number" disabled></td>
+    
 
-// console.log(x== 5 ? 'value is 5':'value is not 5')
+</tr>  
+<tr>        
+    <td>Rajesh</td>
+    <td><input type="number" id="bank-balance-2" ></td>
+    <td><input type="number" disabled></td>
+  
 
-// var age =17
+</tr>
 
-// var disc= age>= 18 ? 20:15
+<tr>
+    <td>Shreyash</td>
+    <td><input type="number" id="bank-balance-3" ></td>
+    <td><input type="number" disabled></td>
+    
 
-// console.log(disc)
-//console.log('abhi'- 1)
+</tr>
+       
+</table>
+<button onclick="calculateInterest()">Calculate Interest For all account holders</button>
+</div>
 
-</script>
+
+<script src="index.js"></script>
+    
+    
 </body>
 </html>
