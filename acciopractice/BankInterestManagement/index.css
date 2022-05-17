@@ -1,10 +1,18 @@
+body
+{
+font-family: 'Courier New';
+background-color: #EFF0F3;
+}
+
+
 .bank-balance-display 
 {
  position: absolute;
- top: 50%;
+ top: 30%;
  left: 50%;
  transform: translate(-50%,-50%);
  text-align: center;
+ 
 }
 
 .bank-balance-display table
@@ -17,32 +25,96 @@ table ,tr,th,td
 {
 border: 2px solid black;
 border-collapse: collapse;
+
 }
 
  td, th
 {
+    
 padding: 10px;
+}
+th
+{
+    background-color: #D9376E;
+    color: #FFFFFE;
 }
 
 td input
 {
     border: 1px solid black;
-    border-radius: 3px;
+    border-radius: 20px;
 width: 75% ;
 padding: 10px 20px;
 }
+
 .display-updated-balance
 {
-    
+border: none;
+
 }
 
 .bank-balance-display button
 {
+    background-color:#FF8E3C;
     margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: black;
-    color: aliceblue;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    color: #FFFFFE;
     cursor: pointer;
+    width: 720px;
+    font-size: medium;
+    margin-top: 8px;
 
 }
+
+button:active {
+    background-color: #D9376E;
+    transform: translateY(4px);
+  }
+
+  .brand
+  {
+background-color: #D9376E;
+color: #FFFFFE;
+height: 7vh;
+width: 100%;
+}
+
+h1
+{
+padding-top: 13.5px;
+padding-left: 8px;
+padding-right: 8px;
+
+}
+
+  #top
+  {
+     position:absolute;
+     width: 100%;
+  }
+
+  *{margin: 0;
+padding: 0;}
+
+  #bottom
+   {
+      position: absolute;
+      top:93%;
+      text-align: right;
+
+}
+
+ /* #rule
+{
+    position: absolute;
+    top: 60%;
+    left: 23%;
+    height: 170px;
+    width: 735px;
+    text-align: center;
+    border-radius: 10px;
+    background-color:#FFFFFE;
+ 
+} */
