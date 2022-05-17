@@ -2,6 +2,8 @@ div
 {
 padding: 50px;
 text-align: center;
+
+
 }
 
 input
@@ -12,6 +14,7 @@ input
     margin-bottom: 10px;
     font-size: 2em;
     border-radius: 10px;
+    max-width: 100%;
 }
 
 button
