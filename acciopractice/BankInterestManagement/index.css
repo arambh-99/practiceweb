@@ -4,65 +4,57 @@ font-family: 'Courier New';
 background-color: #EFF0F3;
 }
 
-
 .bank-balance-display 
 {
-    position: absolute;
- 
+ position: absolute;
  top: 50%;
  left: 50%;
-
- 
  max-width: 100%;
- 
  transform: translate(-50%,-50%);
  text-align: center;
- resize: horizontal;
  overflow: auto;
  
 }
 
 .bank-balance-display table
 {
-    border: 2px solid black;
-
+  border: 2px solid black;
 }
 
 table ,tr,th,td
 {
-border: 2px solid black;
-border-collapse: collapse;
+ border: 2px solid black;
+ border-collapse: collapse;
 
 }
 
  td, th
 {
-    
-padding: 10px;
+  padding: 10px;
 }
+
 th
 {
-    background-color: #D9376E;
-    color: #FFFFFE;
+  background-color: #D9376E;
+  color: #FFFFFE;
 }
 
 td input
 {
-    border: 1px solid black;
-    border-radius: 20px;
-width: 75% ;
-padding: 10px 20px;
+   border: 1px solid #D9376E;
+   border-radius: 20px;
+   width: 75% ;
+   padding: 10px 20px;
 }
 
 .display-updated-balance
 {
-border: none;
-
+   border: none;
 }
 
 .bank-balance-display button
 {
-    background-color:#FF8E3C;
+    background-color:#AE275F;
     margin: 10px;
     padding: 10px;
     border-radius: 20px;
@@ -116,8 +108,10 @@ padding: 0;}
  #rule
 {
     
-    height: 70px;
+    height: 100%;
+    
     width: 725px;
+    max-width: 97%;
     text-align: center;
     border-radius: 10px;
     background-color:#FFFFFE;
@@ -126,10 +120,8 @@ padding: 0;}
     border: 2px solid #D9376E;
 
 }
+
 h3
 {
-margin-left: none;
-margin-right: none;
-padding-left: 0px;
-padding-right: 0px;
+    
 }
