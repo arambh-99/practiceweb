@@ -1,0 +1,15 @@
+.registration-form{
+    background-color:#8BD3DD ;
+    width: 80%;
+    margin: 10% auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 25px;
+  }
+
+  body
+  {
+    font-family: 'Courier New';
+    background-color: #F3D2C1;
+    
+  }
