@@ -2,6 +2,10 @@
   max-width: 400px;
   margin: 10vh auto 0 auto;
   box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
+  border-radius: 50px;
+  background-color: #D9D4E7;
+  font-family: 'Courier New';
+  color: white;
 }
 
 #display{
@@ -10,6 +14,7 @@
   line-height: 70px;
   padding: 16px 8px;
   font-size: 25px;
+  
 }
 
 .buttons{
@@ -18,17 +23,27 @@
 }
 
 .button {
-  border: 0.5px solid #999;
+  /* border: 0.5px solid #999; */
   line-height: 100px;
   text-align: center;
   font-size: 25px;
   cursor: pointer;
+  border-radius: 50px;
+  background-color: #8546F0;
+  
+  margin: 2px;
 }
 
-#equal {
+.nums
+{
+  background-color: #FEC7D7;
+  
+}
+
+/* #equal {
   background-color: rgb(85,85,255);
   color: white;
-}
+} */
 
 .button:hover{
   background-color: #323330;
