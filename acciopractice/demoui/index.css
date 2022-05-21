@@ -1,0 +1,45 @@
+body
+{
+    font-family: 'Courier New';
+    
+text-align: center;
+}
+
+/* h1
+{
+text-align: center;
+} */
+
+.row
+
+{
+    display: grid;
+    grid-template-columns: 123px 123px 123px;
+    justify-content: center;
+
+}
+
+.col
+{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: aqua;
+    padding: 20px;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+
+  
+}
+
+.col:hover
+{
+    background-color: #3e8e41;
+    color: white;
+}
+
+
+.col:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+  }
