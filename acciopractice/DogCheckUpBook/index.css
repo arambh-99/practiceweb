@@ -3,7 +3,6 @@ body
     font-family: 'Courier New';
     text-align: center;
     background-color: #BAE8E8;
-    background-color: #BAE8E8;
 }
 
 input
@@ -15,11 +14,6 @@ input
 
 }
 
-h1
-{
-    position: absolute;
-
-}
 
 .block
 {
