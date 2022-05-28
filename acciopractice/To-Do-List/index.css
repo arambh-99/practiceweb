@@ -38,3 +38,23 @@
 	color: black;
 	border-color: black;
 } */
+
+.to-do-card {
+	margin: 20px;
+	box-shadow: 5px 10px 18px #888888;
+}
+
+.to-do-card .card-header {
+	background-color: bisque;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.to-do-card .card-title {
+	margin-bottom: 20px;
+}
+
+.to-do-card .btn-danger {
+	float: right;
+}

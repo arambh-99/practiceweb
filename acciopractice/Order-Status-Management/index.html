@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status Management</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="#">Order Status Management</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" onclick="homePage()">Home <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <div class="signUpLink" id="signUpLink"><a class="nav-link registration-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up <span class="sr-only">(current)</span></a></div>
+            <div id="logInLink"><a class="nav-link registration-link" href="#" data-toggle="modal" data-target="#logInModal" >Log In<span class="sr-only">(current)</span></a></div>
+         </form>
+        </div>
+      </nav>
+
+      <button class="tab-link" onclick="openPage('placeOrder', this)">Place Order</button>
+      <button class="tab-link" onclick="openPage('trackOrder', this)">Track Order</button>
+
+      <div class="tab-content place-order" id="placeOrder">
+        
+          <div class="pizza-size">
+              <div class="heading">
+                <h3 class="h3Heading">Please select size</h3>
+              </div>
+              <br>
+            <div class="choices">
+                <span class="size">
+                    <label for="pizza-size" class="size-label">Regular</label>
+                    <input type="radio" class="size1" name="pizza-size" id="regular-size" value="Regular">
+                </span>
+                <span class="size">
+                    <label for="pizza-size" class="size-label">Medium</label>
+                    <input type="radio" class="size2" name="pizza-size" id="medium-size" value="Medium">
+                </span>
+                <span class="size">
+                    <label for="pizza-size" class="size-label">Large</label>
+                    <input type="radio" class="size3" name="pizza-size" id="large-size" value="Large">
+                </span>
+            </div>            
+          </div>
+          <br>
+          <br>
+          
+          <div class="pizza-toppings">
+              <div class="heading">
+                <h3 class="h3Heading">Choose your toppings</h3>
+              </div>
+              <div class=" row choices">
+                  <div class="col">
+                    <div>
+                        <label for="pizza-toppings" class="toppings">Mushroom</label> 
+                        <input type="checkbox" name="pizza-toppings" id="toppings1" value="Mushroom"> 
+                      </div>
+                      
+                      <div>
+                        <label for="pizza-toppings" class="toppings">Red bell peppers</label>
+                        <input type="checkbox" name="pizza-toppings" id="toppings2" value="Red bell peppers">
+                      </div>
+                      
+                      <div>
+                        <label for="pizza-toppings" class="toppings">Tomato</label>
+                        <input type="checkbox" name="pizza-toppings" id="toppings3" value="Tomato">
+                      </div>
+                      
+                  </div>
+                  <div class="col">
+                    <div>
+                        <label for="pizza-toppings" class="toppings">Jalapeno</label>
+                        <input type="checkbox" name="pizza-toppings" id="toppings4" value="Jalapeno">
+                      </div>
+                      
+                      <div>
+                        <label for="pizza-toppings" class="toppings">Onion</label>
+                        <input type="checkbox" name="pizza-toppings" id="toppings5" value="Onion"> 
+                      </div>
+                      
+                      <div>
+                        <label for="pizza-toppings" class="toppings">Extra Cheese</label>
+                        <input type="checkbox" name="pizza-toppings" id="toppings6" value="Extra Cheese">
+                      </div>
+                      
+                  </div>
+              </div>
+              </div>
+              
+          <div class="quantity">
+            <label for="quantity"><h3 class="h3Heading">Please enter quantity</h3></label>
+            <input type="number" name="quantity" id="quantity" min="1" max="30">
+          </div>
+
+          <div class="submit">
+            <button type="submit" class="submit-choices" onclick="submitOrder()">Place Order</button>
+          </div>
+          
+      </div>
+
+
+      <div class="tab-content track-order" id="trackOrder">
+        <h1 class="display-4 main-heading">Order Status</h1>
+        <input class="form-control form-control-lg order-ID" id="order-ID-input" type="text" placeholder="Please enter the order ID">
+  
+        <div class="btn-outer">
+          <button class="btn btn-dark btn-lg fetch-btn" onclick="executeOrder()">Fetch details</button>
+        </div>
+        
+        <div class="empty-img" id="empty-img">
+            <img src="5081-empty-box.gif">
+        </div>
+        <div class="container">
+          <div class="row" id="parent-div">
+              <div class="col-md-4 col-xs-12 order-block">
+                  <div class="card text-center">
+                      <div class="card-header" id="order-ID-display">
+                                Order ID : 
+                      </div>
+                      <div class="card-body">
+                                <p class="card-title">Items: </p>
+                                <h5 class="card-text">Bill Amount : </h5>
+                                <div class="order-status"> PIZZA BAKED</div>
+                                
+                      </div>
+                      <div class="card-footer text-muted">
+                          <button class="btn btn-primary cancel-btn" onclick="">Cancel Order</button> 
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+  
+      </div>
+
+      <div class="jumbotron bg-light" id="jumb">
+        <h1 class="display-4">Welcome to user management app!</h1>
+        <p class="lead">This is a simple web app to place and track order status.</p>
+        <hr class="my-4">
+        <p>It uses javascript promises to display order status timely and uses well defined validation conditions for user sign-up.</p>
+        <p class="lead">
+          <a class="btn" href="#" role="button" onclick="openPage('placeOrder', this)">Place Order</a>
+        </p>
+    </div>
+
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <form class="needs-validation"  novalidate autocomplete="off">
+                <div class="form-row">
+                  <div class="row name">
+                    <div class="col mb-3"> 
+                      <label for="firstName">First name</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                      <div class="valid-feedback" id="validFirstName">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback" id="invalidFirstName">
+                        Please enter a valid first name.
+                      </div>
+                    </div>
+                    <div class="col mb-3">
+                      <label for="lastName">Last name</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                      <div class="valid-feedback" id="validLastName">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback" id="invalidLastName">
+                        Please enter a valid last name.
+                      </div>
+                    </div>
+                  </div>        
+                  <div class="col mb-3">
+                    <label for="email">Email</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="emailPrepend">@</span>
+                      </div>
+                      <input type="text" class="form-control" id="email" placeholder="Email" aria-describedby="validationTooltipUsernamePrepend" required>
+                      </div>
+                      <div class="valid-feedback" id="validEmail">
+                        Looks good!
+                      </div>
+                      <div class="invalid-feedback" id="invalidEmail">
+                        Please enter a valid email.
+                    </div>
+                  </div>
+                </div>
+                
+                  <div class="col mb-3">
+                    <label for="phone">Phone number</label>
+                    <input type="number" class="form-control" id="phone" placeholder="Phone number" required>
+                    <div class="valid-feedback" id="validPhone">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="invalidPhone">
+                      Please provide a valid phone number.
+                    </div>
+                  </div>
+                  <div class="col mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" onkeydown ="checkPwdStrength()" required>
+                    <div class="valid-feedback" id="validPassword">
+                      Looks good!
+                    </div>
+                    <div id="passwordStrength">
+                    </div>
+                    <div class="invalid-feedback" id="invalidPassword">
+                      Password must be atleast 8 characters.
+                    </div>
+                  </div>
+                  <div class="col mb-3">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
+                    <div class="valid-feedback" id="validConfirmPassword">
+                      Looks good!
+                    </div>
+                    <div class="invalid-feedback" id="invalidConfirmPassword">
+                      Password does not match.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input shadow-none" type="checkbox" id="tncCheckBox" required checked>
+                      <div class="form-check-label" id="invalidtnc">
+                        Agree to terms and conditions
+                      </div>
+                      <div class="invalid-feedback" id="validtnc">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn" onclick="validate()">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <form class="needs-validation"  novalidate autocomplete="off">
+                  <div class="form-row">        
+                      <div class="col mb-3">
+                          <label for="email">Email</label>
+                          <div class="input-group">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="emailPrepend">@</span>
+                              </div>
+                              <input type="text" class="form-control" id="loginEmail" placeholder="Email" aria-describedby="validationTooltipUsernamePrepend" required>
+                          </div>
+                          <div class="invalid-feedback" id="invalidLoginEmail">
+                              Invalid email.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col mb-3">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" id="loginPassword" placeholder="Password" onkeydown ="checkPwdStrength()" required>
+                      <div class="invalid-feedback" id="invalidLoginPassword">
+                          Invalid password.
+                      </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn" onclick="loginValidate()">Log In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/validation.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/orderStatus.js"></script>
+    
+</body>
+</html>
