@@ -1,0 +1,27 @@
+.store
+{
+    color: orange;
+}
+
+.brand
+{
+margin: 50px !important;
+padding-left:10px ;
+}
+
+.left
+{margin-left: 400px;
+    text-align: left !important
+}
+.content1
+{
+    text-align: center;
+}
+.card
+{
+    display: inline-block;
+    height: 150px !important;
+width: 150px !important;
+margin: 40px 20px;
+
+}
