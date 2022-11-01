@@ -1,0 +1,68 @@
+
+.header-container {
+  background: linear-gradient(#96e9fb, #abecd6);
+  height: 622px;
+  width: 1200px;
+  left: 49px;
+  top: 92px;
+  border-radius: 20px;
+  margin-left: 3%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.header-inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.header-texts {
+  padding: 80px 50px 30px 80px;
+}
+.header-first h5 {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+.new-collection h1 {
+  font-family: Montserrat;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  vertical-align: top;
+  text-align: left;
+  color: #252b42;
+}
+.header-inner-text h4 {
+  font-family: Montserrat;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  vertical-align: top;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+.header-button button {
+  width: 221px;
+  height: 62px;
+  padding: 15px, 40px, 15px, 40px;
+  border-radius: 5px;
+  gap: 10px;
+  background-color: #23a6f0;
+  font-family: Montserrat;
+  border: none;
+  font-size: 24px;
+}
+/* .eclipse-image{
+
+} */
+.image img {
+  height: 622px;
+  width: 622px;
+  left: -5px;
+  top: 15px;
+}
+

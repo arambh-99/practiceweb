@@ -1,0 +1,114 @@
+.footer-container {
+  position: absolute;
+  width: 1440px;
+  height: 488px;
+  left: 3px;
+  top: 1387px;
+  background: #ffffff;
+  margin-top: 10%;
+}
+.footer-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+.footer-name {
+  margin-left: 10%;
+}
+.footer-name h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #252b42;
+}
+.footer-social-icons {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  margin-right: 17%;
+}
+.border-bottom {
+  position: absolute;
+  width: 1057px;
+  height: 0px;
+  left: calc(50% - 1057px / 2 + 3.5px);
+  top: 138px;
+  border: 1px solid #e6e6e6;
+  margin-left: -100px;
+}
+.footer-items {
+  position: absolute;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+  margin-left: 12%;
+  gap: 5%;
+  width: 1440px;
+  height: 272px;
+  left: 0px;
+  top: 142px;
+}
+.footer-items h5 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #252b42;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.footer-links {
+  font-family: "Montserrat";
+  list-style: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+.getintouch {
+    border-radius: 5px;
+}
+.getintouch input {
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+}
+.getintouch button {
+  height: 6.5vh;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: #23a6f0;
+  border: 1px solid #e6e6e6;
+  border-radius: 0px 5px 5px 0px;
+}
+::placeholder {
+  width: 77px;
+  height: 28px;
+  left: 20px;
+  top: calc(50% - 28px / 2);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
